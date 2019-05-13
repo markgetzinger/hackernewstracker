@@ -33,4 +33,13 @@ public class TrackerController {
 
     }
 
+
+    @PostMapping("/top")
+        public String getTopTen(){
+
+            return "template";
+        }
+
+
+
 }

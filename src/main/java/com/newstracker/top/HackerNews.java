@@ -1,23 +1,18 @@
 package com.newstracker.top;
 
-import java.util.ArrayList;
-
 public class HackerNews {
 
-    @Override
-    public String toString() {
-        return "HackerNews{" +
-                "url='" + url + '\'' +
-                ", title='" + title + '\'' +
-                ", storyId='" + storyId + '\'' +
-                '}';
+    String url;
+
+    public HackerNews(String url, String title) {
+        this.url = url;
+        this.title = title;
     }
 
-    String url;
+    public HackerNews() {
+    }
     String title;
     String storyId;
-
-    ArrayList<HackerNews> hackerList;
 
     public String getUrl() {
         return url;
@@ -42,6 +37,7 @@ public class HackerNews {
     public void setStoryId(String storyId) {
         this.storyId = storyId;
     }
+
 
 
 }

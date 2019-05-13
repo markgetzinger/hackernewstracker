@@ -55,6 +55,7 @@ public class TrackerOperations {
             HackerNews newsItem = jacksonReadAndWrite();
             System.out.println(newsItem.getTitle());
             System.out.println(newsItem.getUrl());
+            buildFTLTemplate();
 
 
 
@@ -116,24 +117,24 @@ public class TrackerOperations {
         //return null;
     }
 
-    private static List formatJsonArray(String string) {
+    public static List formatJsonArray(String string) {
         String[] strings = string.replace("[", "").replace("]", "").split(", ");
         List<String> storyList = Arrays.asList(strings[0].split(","));
         return storyList;
     }
 
-    private static ArrayList<HackerNews> hackerNewsTopStories() {
+    public static ArrayList<HackerNews> hackerNewsTopStories() {
         ArrayList<HackerNews> theNews = null;
         return theNews;
     }
 
-    private void setTopTenIds(List<String> storyList){
+    public void setTopTenIds(List<String> storyList){
         for(int i = 0; i<10;i++){
             topTenList.add(storyList.get(i));
         }
     }
 
-    private HackerNews jacksonReadAndWrite(){
+    public HackerNews jacksonReadAndWrite(){
         SimpleModule module =
                 new SimpleModule("CarDeserializer", new Version(3, 1, 8, null, null, null));
         module.addDeserializer(HackerNews.class, new NewsDeserialize(HackerNews.class));
@@ -149,26 +150,36 @@ public class TrackerOperations {
         return car;
     }
 
-    private void buildFTLTemplate(){
+    public void buildFTLTemplate(){
         try {
             //Instantiate Configuration class
             Configuration cfg = new Configuration(Configuration.VERSION_2_3_23);
-            cfg.setDirectoryForTemplateLoading(new File("ftl"));
+            cfg.setDirectoryForTemplateLoading(new File("src/main/resources"));
             cfg.setDefaultEncoding("UTF-8");
             cfg.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
+
+            HackerNews newsItem = jacksonReadAndWrite();
+            //System.out.println(newsItem.getTitle());
+            //System.out.println(newsItem.getUrl());
 
             //Create Data Model
             Map<String, Object> map = new HashMap<>();
             map.put("blogTitle", "Freemarker Template Demo");
             map.put("message", "Getting started with Freemarker.<br/>Find a simple Freemarker demo.");
-            List<URL> references = new ArrayList<>();
-            references.add(new URL("http://url1.com"));
-            references.add(new URL("http://url2.com"));
-            references.add(new URL("http://url3.com"));
+            List<HackerNews> references = new ArrayList<>();
+            references.add(new HackerNews(newsItem.getUrl(), newsItem.getTitle()));
+            //references.add(new URL("http://url1.com"));
+            //references.add(new URL("http://url3.com"));
             map.put("references", references);
 
             //Instantiate template
             Template template = cfg.getTemplate("template.ftl");
+
+            //testing
+            System.out.println("printing keyset");
+            System.out.println(map.get("references"));
+            System.out.println("keyset Printed");
+
 
             //Console output
             Writer console = new OutputStreamWriter(System.out);
@@ -176,7 +187,7 @@ public class TrackerOperations {
             console.flush();
 
             // File output
-            Writer file = new FileWriter (new File("ftl/template.html"));
+            Writer file = new FileWriter (new File("src/main/resources/template.html"));
             template.process(map, file);
             file.flush();
             file.close();
