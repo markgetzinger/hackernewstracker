@@ -4,18 +4,20 @@ import java.util.ArrayList;
 
 public class HackerNews {
 
+    @Override
+    public String toString() {
+        return "HackerNews{" +
+                "url='" + url + '\'' +
+                ", title='" + title + '\'' +
+                ", storyId='" + storyId + '\'' +
+                '}';
+    }
+
     String url;
     String title;
     String storyId;
 
     ArrayList<HackerNews> hackerList;
-
-    public HackerNews(String url, String title, String storyId) {
-        this.url = url;
-        this.title = title;
-        this.storyId = storyId;
-    }
-
 
     public String getUrl() {
         return url;

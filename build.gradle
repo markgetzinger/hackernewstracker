@@ -19,9 +19,12 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
+    maven { url "https://repo.spring.io/libs-release" }
+    mavenLocal()
     mavenCentral()
 }
 dependencies {
+    compile ('org.freemarker:freemarker:2.3.23')
     compile (group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.3.6')
     compile ('com.googlecode.json-simple:json-simple:1.1.1')
     compile ('org.json:json:20171018')
