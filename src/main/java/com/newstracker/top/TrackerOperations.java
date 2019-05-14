@@ -42,28 +42,12 @@ public class TrackerOperations {
     List<String> topTenList = new ArrayList<>();
     List<String> topTenStories = new ArrayList<>();
 
-
-    public String retrieveTop500() {
-
-
+    public void retrieveTop10() {
         try {
-            //System.out.println(formatJsonArray(getText(sURL)));
             setTopTenStories();
-            for(int i = 0;i<10;i++){
-                System.out.println(topTenStories.get(i)+"\n");
-            }
-            HackerNews newsItem = jacksonReadAndWrite();
-            System.out.println(newsItem.getTitle());
-            System.out.println(newsItem.getUrl());
             buildFTLTemplate();
-
-
-
         } catch (Exception e) {
-
         }
-        return "hi";
-
     }
 
 
@@ -73,20 +57,15 @@ public class TrackerOperations {
         URL website = new URL(url);
         URLConnection connection = website.openConnection();
         BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream(), "UTF8"));
-
         StringBuilder response = new StringBuilder();
         String inputLine;
-
         while ((inputLine = in.readLine()) != null)
             response.append(inputLine);
-
         in.close();
-
         return response.toString();
     }
 
     public void setTopTenStories(){
-
         String nextStory;
         String str = "";
         List<String> top500List = new ArrayList<>();
@@ -106,15 +85,12 @@ public class TrackerOperations {
 
                 while (null != (str = br.readLine())) {
                     appender += str;
-                    //System.out.println(str);
                 }
                 topTenStories.add(appender);
             }
-            //return str;
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        //return null;
     }
 
     public static List formatJsonArray(String string) {
@@ -134,60 +110,48 @@ public class TrackerOperations {
         }
     }
 
-    public HackerNews jacksonReadAndWrite(){
+    public ArrayList<HackerNews> jacksonReadAndWrite(){
         SimpleModule module =
-                new SimpleModule("CarDeserializer", new Version(3, 1, 8, null, null, null));
+                new SimpleModule("NewsDeserializer", new Version(3, 1, 8, null, null, null));
         module.addDeserializer(HackerNews.class, new NewsDeserialize(HackerNews.class));
-        HackerNews car = null;
+        ArrayList <HackerNews> hackerNews = new ArrayList<>();
         ObjectMapper mapper = new ObjectMapper();
         mapper.registerModule(module);
 
         try{
-             car = mapper.readValue(topTenStories.get(0), HackerNews.class);
+            for(int storyIndex =0;storyIndex<10;storyIndex++){
+                hackerNews.add(mapper.readValue(topTenStories.get(storyIndex), HackerNews.class));
+            }
+
         }catch(Exception e){}
-
-
-        return car;
+        return hackerNews;
     }
 
     public void buildFTLTemplate(){
         try {
-            //Instantiate Configuration class
             Configuration cfg = new Configuration(Configuration.VERSION_2_3_23);
             cfg.setDirectoryForTemplateLoading(new File("src/main/resources"));
             cfg.setDefaultEncoding("UTF-8");
             cfg.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
 
-            HackerNews newsItem = jacksonReadAndWrite();
-            //System.out.println(newsItem.getTitle());
-            //System.out.println(newsItem.getUrl());
+            ArrayList<HackerNews> newsItems = jacksonReadAndWrite();
 
-            //Create Data Model
+
             Map<String, Object> map = new HashMap<>();
-            map.put("blogTitle", "Freemarker Template Demo");
-            map.put("message", "Getting started with Freemarker.<br/>Find a simple Freemarker demo.");
+            map.put("blogTitle", "Hacker News - Best In the West");
             List<HackerNews> references = new ArrayList<>();
-            references.add(new HackerNews(newsItem.getUrl(), newsItem.getTitle()));
-            //references.add(new URL("http://url1.com"));
-            //references.add(new URL("http://url3.com"));
-            map.put("references", references);
+            for(HackerNews newsItem : newsItems){
+                references.add(newsItem);
+                map.put("references", references);
+            }
 
-            //Instantiate template
             Template template = cfg.getTemplate("template.ftl");
 
-            //testing
-            System.out.println("printing keyset");
-            System.out.println(map.get("references"));
-            System.out.println("keyset Printed");
-
-
-            //Console output
             Writer console = new OutputStreamWriter(System.out);
             template.process(map, console);
             console.flush();
 
-            // File output
-            Writer file = new FileWriter (new File("src/main/resources/template.html"));
+            Writer file = new FileWriter (new File("src/main/resources/public/index.html"));
             template.process(map, file);
             file.flush();
             file.close();

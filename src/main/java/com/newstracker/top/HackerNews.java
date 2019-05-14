@@ -3,6 +3,8 @@ package com.newstracker.top;
 public class HackerNews {
 
     String url;
+    String title;
+    String storyId;
 
     public HackerNews(String url, String title) {
         this.url = url;
@@ -11,8 +13,6 @@ public class HackerNews {
 
     public HackerNews() {
     }
-    String title;
-    String storyId;
 
     public String getUrl() {
         return url;
@@ -39,5 +39,12 @@ public class HackerNews {
     }
 
 
-
+    @Override
+    public String toString() {
+        return "HackerNews{" +
+                "url='" + url + '\'' +
+                ", title='" + title + '\'' +
+                ", storyId='" + storyId + '\'' +
+                '}';
+    }
 }

@@ -15,7 +15,7 @@ public class NewsDeserialize extends StdDeserializer<HackerNews> {
 
     @Override
     public HackerNews deserialize(JsonParser parser, DeserializationContext deserializer) throws IOException {
-        HackerNews car = new HackerNews();
+        HackerNews hackerNews = new HackerNews();
         while(!parser.isClosed()){
             JsonToken jsonToken = parser.nextToken();
 
@@ -26,18 +26,15 @@ public class NewsDeserialize extends StdDeserializer<HackerNews> {
                 jsonToken = parser.nextToken();
 
                 if("id".equals(fieldName)){
-                    System.out.println("id found");
-                    car.setStoryId(parser.getValueAsString());
+                    hackerNews.setStoryId(parser.getValueAsString());
                 } else if ("title".equals(fieldName)){
-                    System.out.println("title found");
-                    car.setTitle(parser.getValueAsString());
+                    hackerNews.setTitle(parser.getValueAsString());
                 }else if ("url".equals(fieldName)){
-                    System.out.println("url found");
-                    car.setUrl(parser.getValueAsString());
+                    hackerNews.setUrl(parser.getValueAsString());
                 }
             }
         }
         //System.out.println(car);
-        return car;
+        return hackerNews;
     }
 }
