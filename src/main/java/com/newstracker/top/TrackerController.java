@@ -7,6 +7,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.List;
+
 //import com.tutorialspoint.demo.model.Product;
 
 @Controller
@@ -14,16 +16,21 @@ public class TrackerController {
     @Autowired
     RestTemplate restTemplate;
 
+    TrackerOperations trackerOps = new TrackerOperations();
+
     @GetMapping("/")
     public String getProductList(Model model) {
-        TrackerOperations trackerOps = new TrackerOperations();
-        trackerOps.retrieveTop10();
-
-//        HttpHeaders headers = new HttpHeaders();
-//        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-//        HttpEntity<String> entity = new HttpEntity<String>(headers);
+        trackerOps.buildFTLTemplate(trackerOps.getTopStories(10));
 
         return "index.html";
 
+
     }
+    @PostMapping("/calc")
+    public String calcResults(Model model) {
+        trackerOps.buildFTLTemplate(trackerOps.getTopStories(10));
+        //model.addAttribute("news",values);
+        return "result";
+    }
+
 }
