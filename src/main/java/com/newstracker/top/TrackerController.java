@@ -18,18 +18,9 @@ public class TrackerController {
 
     TrackerOperations trackerOps = new TrackerOperations();
 
-    @GetMapping("/")
-    public String getProductList(Model model) {
-        trackerOps.buildFTLTemplate(trackerOps.getTopStories(10));
-
-        return "index.html";
-
-
-    }
-    @PostMapping("/calc")
+        @GetMapping("/")
     public String calcResults(Model model) {
-        trackerOps.buildFTLTemplate(trackerOps.getTopStories(10));
-        //model.addAttribute("news",values);
+        model.addAttribute("hackerNewsStories", trackerOps.getTopStories(10));
         return "result";
     }
 
