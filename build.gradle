@@ -24,11 +24,7 @@ repositories {
     mavenCentral()
 }
 dependencies {
-    compile ('com.googlecode.json-simple:json-simple:1.1.1')
-    compile ('org.json:json:20171018')
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
-    implementation ('com.google.code.gson:gson:2.8.5')
     compile('org.springframework.boot:spring-boot-starter-web')
-    compile ('com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.3')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

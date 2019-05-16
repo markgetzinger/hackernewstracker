@@ -9,11 +9,8 @@ public class HackerNews {
     public String storyId;
 
     public String by;
-    public int descendants;
     public int id;
-    public List<Integer> kids;
     public int score;
-    public int time;
     public String type;
 
     public HackerNews(String url, String title) {
@@ -56,14 +53,6 @@ public class HackerNews {
         this.by = by;
     }
 
-    public int getDescendants() {
-        return descendants;
-    }
-
-    public void setDescendants(int descendants) {
-        this.descendants = descendants;
-    }
-
     public int getId() {
         return id;
     }
@@ -72,13 +61,6 @@ public class HackerNews {
         this.id = id;
     }
 
-    public List<Integer> getKids() {
-        return kids;
-    }
-
-    public void setKids(List<Integer> kids) {
-        this.kids = kids;
-    }
 
     public int getScore() {
         return score;
@@ -88,13 +70,7 @@ public class HackerNews {
         this.score = score;
     }
 
-    public int getTime() {
-        return time;
-    }
 
-    public void setTime(int time) {
-        this.time = time;
-    }
 
     public String getType() {
         return type;
@@ -111,11 +87,8 @@ public class HackerNews {
                 ", title='" + title + '\'' +
                 ", storyId='" + storyId + '\'' +
                 ", by='" + by + '\'' +
-                ", descendants=" + descendants +
                 ", id=" + id +
-                ", kids=" + kids +
                 ", score=" + score +
-                ", time=" + time +
                 ", type='" + type + '\'' +
                 '}';
     }

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>result.html</title>
+    <title>Hacker News</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -24,7 +24,7 @@
 
 <div class="bs-example">
     <div class="list-group" th:each="story : ${hackerNewsStories}">
-        <a th:href="${story.url}" class="list-group-item list-group-item-action">
+        <a th:href="${story.url}" target="_blank" class="list-group-item list-group-item-action">
             <i class="fa fa-newspaper-o"></i> <span th:text="${story.title}"></span>
             <span class="badge badge-pill badge-primary pull-right"><span th:text="${story.score}"></span></span>
         </a>
