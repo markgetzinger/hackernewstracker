@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ea29d7f-d00a-4e20-82c9-3afc337303ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/newstracker/top/CharacterInformation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/newstracker/top/ServerList$SERVER_LIST.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/newstracker/top/ServerList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/newstracker/top/TrackerOperations$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/newstracker/top/TrackerOperations.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/newstracker/top/TrackerOperations.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/newstracker/top/ServerList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/newstracker/top/ServerList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hackernewstracker.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -66,19 +54,52 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/newstracker/top/TrackerOperations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="96" column="51" selection-start-line="96" selection-start-column="51" selection-end-line="96" selection-end-column="51" />
+            <state relative-caret-position="273">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/newstracker/top/ServerList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#349#350#0" expanded="true" />
+                <element signature="e#379#380#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/settings.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gradlew">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/newstracker/top/ServerList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/README.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -103,7 +124,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/newstracker/top/CharacterInformation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="163">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#1212#1213#0" expanded="true" />
                 <element signature="e#1278#1279#0" expanded="true" />
@@ -168,8 +189,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/newstracker/top/CharacterInformation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/newstracker/top/TrackerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/newstracker/top/BlizzardClientKeys.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/newstracker/top/TrackerOperations.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/newstracker/top/ServerList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/newstracker/top/TrackerOperations.java" />
+        <option value="$PROJECT_DIR$/settings.gradle" />
       </list>
     </option>
   </component>
@@ -191,32 +213,6 @@
             <path>
               <item name="hackernewstracker" type="b2602c69:ProjectViewProjectNode" />
               <item name="hackernewstracker" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="hackernewstracker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hackernewstracker" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hackernewstracker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hackernewstracker" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="hackernewstracker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hackernewstracker" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hackernewstracker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hackernewstracker" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="top" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -353,7 +349,7 @@
       <workItem from="1559245024957" duration="2766000" />
       <workItem from="1559409629605" duration="1481000" />
       <workItem from="1559411164909" duration="3264000" />
-      <workItem from="1559628715406" duration="754000" />
+      <workItem from="1559628715406" duration="1308000" />
     </task>
     <servers />
   </component>
@@ -384,7 +380,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8971000" />
+    <option name="totallyTimeSpent" value="9525000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -398,13 +394,13 @@
       <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.122719735" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.4046891" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.4046891" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="2" weight="0.32937366" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32937366" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32937366" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.39347604" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.39347604" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.28509718" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -461,9 +457,6 @@
   <component name="editorHistoryManager">
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.8.10/c9231226e0eb8e90ff73c09ae57487b451d65771/jackson-core-2.8.10-sources.jar!/com/fasterxml/jackson/core/JsonParser.java" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.5/c5b4c491aecb72e7c32a78da0b5c6b9cda8dee0f/gson-2.8.5-sources.jar!/com/google/gson/stream/JsonReader.java" />
-    <entry file="file://$PROJECT_DIR$/gradlew">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ftl/template.ftl" />
     <entry file="file://$PROJECT_DIR$/src/ftl/template.html" />
     <entry file="file://$PROJECT_DIR$/src/template.html" />
@@ -480,13 +473,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -512,13 +498,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/newstracker/top/BlizzardClientKeys.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/newstracker/top/TrackerOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="96" column="51" selection-start-line="96" selection-start-column="51" selection-end-line="96" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/newstracker/top/TrackerController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -536,7 +515,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/newstracker/top/CharacterInformation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#1212#1213#0" expanded="true" />
             <element signature="e#1278#1279#0" expanded="true" />
@@ -555,12 +534,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/newstracker/top/ServerList.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/newstracker/top/TrackerOperations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        <state relative-caret-position="273">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/newstracker/top/ServerList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#379#380#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
