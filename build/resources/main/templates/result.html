@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hacker News</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+    .bs-example{
+        margin: 20px;
+    }
+    </style>
+</head>
+<body>
+<br />
+<center><h2>Hacker News</h2></center>
+
+    <div th:if="${hackerNewsStories.empty}">
+       No News Available
+    </div>
+
+<div class="bs-example">
+    <div class="list-group" th:each="story : ${hackerNewsStories}">
+        <a th:href="${story.url}" target="_blank" class="list-group-item list-group-item-action">
+            <i class="fa fa-newspaper-o"></i> <span th:text="${story.title}"></span>
+            <span class="badge badge-pill badge-primary pull-right"><span th:text="${story.score}"></span></span>
+        </a>
+    </div>
+</div>
+
+
+</body>
+</html>

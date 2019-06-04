@@ -14,6 +14,7 @@ public class TrackerOperations {
 
     private static final String HACKER_URL = "https://hacker-news.firebaseio.com/v0";
     private static final RestTemplate restTemplate = new RestTemplate();
+    private static final RestTemplate auctionTemplate = new RestTemplate();
     private static int currentClientIteration = 0;
     private static final String clientPrefix = "CLIENT_";
     private static final String envName = "_NAME";
@@ -47,6 +48,7 @@ public class TrackerOperations {
 
 
     private void collectAHJson(){
+        ParameterizedTypeReference<List<String>> listOfStringsTypeRef = new ParameterizedTypeReference<List<String>>(){};
         //USES A KEY/SECRET
 
         //this JUST gets the JSON of the current server, nothing more
