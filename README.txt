@@ -12,7 +12,10 @@ AuctionHouse JSON
 -> Store data back with the users Database
 
 
-Then utilizing a basic web interface, we can QUERY the mySQL database for users
+Then utilizing a basic web interface, we can QUERY the mySQL database for users of matching criterion, thus
+tracking down known alt characters (for example the possibility of a user with the same pvp level and pet
+count is pretty small, but this is in no way 100% accurate unless you utilize multiple fields- such as
+achievement points with this)
 
 
 
